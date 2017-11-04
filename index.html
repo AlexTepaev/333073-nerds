@@ -1,12 +1,152 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Нёрдс</title>
-  </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
-
-  </body>
+<head>
+	<meta charset="UTF-8">
+	<title>Nerds</title>
+	
+</head>
+<body>
+	<header class="main__header">
+		<nav class="main__navigation container">
+			<a><img src="http://placehold.it/150x100" alt="Логотип веб-студии Nerds"></a>
+			<ul class="site__navigation">
+				<li><a href="#">Студия</a></li>
+				<li><a href="#">Клиенты</a></li>
+				<li><a href="#">Магазин</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+			 <ul class="cart">
+			 	<li class="cart__login">КОРЗИНА</li>
+			 </ul>
+		</nav>
+		<div class="slide__box">
+			<span class="slide__indicator slide__indicator_active"></span>
+			<span class="slide__indicator"></span>
+			<span class="slide__indicator"></span>
+			<section class="slide__one">
+				<p><b>Долго, дорого, скурупулезно.</b></p>
+				<p>Математически выверенный дизайн для вашего сайта или мобильного приложения</p>
+             	<a href="#" class="btn btn__slide">Узнать больше</a>
+			</section>
+			<section class="slide__two">
+				<p><b>Любим математику как никто другой</b></p>
+				<p>Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
+             	<a href="#" class="btn btn__slide">Узнать больше</a>
+			</section>
+			<section class="slide__three">
+				<p><b>Только ночь, только хардкор</b></p>
+				<p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+             	<a href="#" class="btn btn__slide">Узнать больше</a>
+			</section>
+		</div>
+	</header>
+	<main class="content container">
+		<section class="services">
+			<h2 class="visually__hidden">Услуги</h2>
+			<ul class="services__list">
+				<li class="services__item">
+					<figure class="services__pic">
+						<img src="http://placehold.it/150x100" alt="Веб-сайты">
+					</figure>
+					<h3>Веб-сайты</h3>
+					<p>Мир никогда не будет прежним после того как увидит ваш сайт
+					</p> 
+				<a href="#" class="btn btn__sites">ЗАКАЗАТЬ</a>
+				</li>
+				<li class="services__item">
+					<figure class="services__pic">
+						<img src="http://placehold.it/150x100" alt="Веб-приложения">
+					</figure>
+					<h3>Приложения</h3>
+					<p>Покорите топ-10 приложений в AppStore и Google Play
+					</p> 
+				<a href="#" class="btn btn__apps">ЗАКАЗАТЬ</a>
+				</li>
+				<li class="services__item">
+					<figure class="services-pic">
+						<img src="http://placehold.it/150x100" alt="Презентации">
+					</figure>
+					<h3>Презентации</h3>
+					<p>Вы даже неподозреваете, насколько вы изумительны
+					</p> 
+				<a href="#" class="btn btn__presentation">ЗАКАЗАТЬ</a>
+				</li>
+			</ul>
+		</section>
+		<article class="about">
+			<section class="about__team">
+				<h2 class="visually__hidden">О нас</h2>
+				<p><b>Мы маленькая, но гордая дизайн-студия из Краснодара.</b></p> <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p><p class="about__text">Выполняем заказы на разработку:</p>
+				<ul class="about__order">
+					<li>Веб-сайтов любой сложности
+					</li> 
+					<li>Мобильных приложений под iOS и Android
+					</li>
+					<li>Слайдшоу и видео для корпоративных презентаций
+					</li>
+				</ul>
+			</section>
+			<section class="about__facts">
+				<figure class="about__logo">
+					<img src="http://placehold.it/150x100" alt="Логотип Nerds">
+				</figure>
+					<p class="about__us">C 2004 ЛЮБИМ ТОЧНОСТЬ ВО ВСЕМ:</p>
+					<table> 
+						<tr>
+							<th>146%</th>
+							<th>100%</th>
+							<th>50%</th>
+						</tr>
+						<tr>
+							<td>Уровень самоотдачи</td>
+							<td>Соблюдение сроков</td>
+							<td>Минимальная предоплата</td> 
+						</tr>
+					</table>
+			</section>
+		</article>
+		<section class="partners__list">
+		<h2 class="visually__hidden">Наши партнеры</h2>
+			<figure class=partners__item>
+				<a href="#"><img src="http://placehold.it/150x100" alt="HTMLacademy"></a>
+			</figure>
+			<figure class=partners__item>
+				<a href="#"><img src="http://placehold.it/150x100" alt="Барбершоп Бородинский"></a>
+			</figure>
+			<figure class=partners__item>
+				<a href="#"><img src="http://placehold.it/150x100" alt="Салон Pink"></a>
+			</figure>
+			<figure class=partners__item>
+				<a href="#"><img src="http://placehold.it/150x100" alt="MISHKA"></a>
+			</figure>
+		</section>
+		<section class="map">
+		<h2 class="visually__hidden">Как нас найти</h2>
+			<aside class="map__box">
+				<h3>NERDS DESIGN STUDIO</h3>
+				<p>191186, Санкт-Петербург,<br> ул.Большая Конюшеная, д.19.8</p>
+				<p>тел.+7(812)275-75-75</p>
+				<a href="#" class="btn map__btn">Напишите нам</a>
+			</aside>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="footer__socials">
+			<ul class="socials__list">
+				<li class="socials__item"><a href="#" class="btn__social btn__vkontakte">Vkontakte</a></li>
+				<li class="socials__item"><a href="#" class="btn__social btn__facebook">Facebook</a></li>
+				<li class="socials__item"><a href="#" class="btn__social btn__instagram">Instagram</a></li>
+			</ul>
+		</div>
+		<div class="footer__discount">
+			<p class="footer__offer">Давайте дружить, это выгодно!</p><p>Скидка 10% для друзей из социальных сетей</p>
+		</div>
+	</footer>
+	<section class="feedback">
+		<h2 class="feedback__title">Напишите нам</h2>
+		<span class="feedback__close">x</span>
+		<button class="btn feedback__btn"></button>
+		<!--Здесь будет форма-->
+	</section>
+</body>
 </html>
