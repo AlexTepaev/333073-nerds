@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<title>Магазин готовых шаблонов</title>
@@ -7,19 +7,20 @@
 <body>
 	<header class="main__header">
 		<nav class="main__navigation container">
-			<a><img src="http://placehold.it/150x100" alt="Логотип веб-студии Nerds"></a>
+			<a><img src="http://placehold.it/150x100" alt="Логотип веб-студии Nerds">
+			</a>
 			<ul class="site__navigation">
 				<li><a href="#">Студия</a></li>
 				<li><a href="#">Клиенты</a></li>
 				<li><a href="#">Магазин</a></li>
 				<li><a href="#">Контакты</a></li>
 			</ul>
-			 <ul class="cart">
-			 	<li class="cart__login">КОРЗИНА</li>
-			 </ul>
+			<a href="#" class="cart__login">Корзина</a>
 		</nav>
-		<h1>Магазин готовых шаблонов</h1>
 	</header>
+	<div class="main__title">
+		<h1>Магазин готовых шаблонов</h1>
+	</div>
 	<main class="content container">
 		<section class="catalog">
 			<div class="catalog__sort">
@@ -27,71 +28,86 @@
 				<a href="#" class="catalog__sort_type">По цене</a>
 				<a href="#" class="catalog__sort_type">По типу</a>
 				<a href="#" class="catalog__sort_type">По названию</a>
-				<span class="arrow__sort_down arrow__sort_active"></span>
-				<span class="arrow__sort_up"></span>
+				<a href="#" class="arrow__sort_down arrow__sort_active">Вниз</a>
+				<a href="#" class="arrow__sort_up">Вверх</a>
 			</div>
 			<h2 class="visually__hidden">Список шаблонов</h2>
 			<section class="catalog__list">
-				<a href="#" class="catalog__item">
-					<figure class="catalog__pic">
+				<section class="catalog__item">
+					<a href="#">
 						<img src="http://placehold.it/150x100" alt="Седона">
-					</figure>
+					</a>
 					<section class="catalog__item_box">
-						<h3 class="box__title">SEDONA</h3>
-						<p class="box__subtitle">Информационный сайт<br> для туристов</p>
-						<span class="box__btn catalog__btn_box">9900руб.</span>
+						<h3 class="box__title">Sedona</h3>
+						<p class="box__subtitle">Информационный сайт для туристов</p>
+						<p>
+						<a href="#" class="box__button">9900руб.</a>
+						</p>
 					</section>
-				</a>
-				<a href="#" class="catalog__item">
-					<figure class="catalog__pic">
+				</section>
+				<section class="catalog__item">
+					<a href="#">
 						<img src="http://placehold.it/150x100" alt="Лендинг для приложений">
-					</figure>
+					</a>
 					<section class="catalog__item_box">
-						<h3 class="box__title">PINK APP</h3>
-						<p class="box__subtitle">Продуктовый лендинг<br> приложений для iOS и Android</p>
-						<span class="box__btn catalog__btn_box">9900руб.</span>
+						<h3 class="box__title">Pink App</h3>
+						<p class="box__subtitle">Продуктовый лендинг приложений для iOS и Android</p>
+						
+						<a href="#" class="box__button">9900руб.
+						</a>
+					
 					</section>
-				</a>
-				<a href="#" class="catalog__item">
-					<figure class="catalog__pic">
+				</section>
+				<section class="catalog__item">
+					<a href="#">
 						<img src="http://placehold.it/150x100" alt="Барбершоп">
-					</figure>
+					</a>
 					<section class="catalog__item_box">
 						<h3 class="box__title">Barbershop</h3>
-						<p class="box__subtitle">Сайт салона красоты.<br>Для мужчин,да.</p>
-						<span class="box__btn catalog__btn_box">9900руб.</span>
+						<p class="box__subtitle">Сайт салона красоты. Для мужчин,да.
+						</p>
+						
+						<a href="#" class="box__button">
+						9900руб.
+						</a>
+						
 					</section>
-				</a>
-				<a href="#" class="catalog__item">
-					<figure class="catalog__pic">
+				<section class="catalog__item">
+					<a href="#">
 						<img src="http://placehold.it/150x100" alt="Интернет-магазин Мишка">
-					</figure>
+					</a>
 					<section class="catalog__item_box">
-						<h3 class="box__title">MISHKA</h3>
-						<p class="box__subtitle">Интернет-магазин<br> вязаных игрушек</p>
-						<span class="box__btn catalog__btn_box">9900руб.</span>
+						<h3 class="box__title">Mishka</h3>
+						<p class="box__subtitle">Интернет-магазин< вязаных игрушек
+						</p>
+						<a href="#" class="box__button">9900руб.
+						</a>
 					</section>
-				</a>
-				<a href="#" class="catalog__item">
-					<figure class="catalog__pic">
+				</section>
+				<section class="catalog__item">
+					<a href="#">
 						<img src="http://placehold.it/150x100" alt="Курсы повышения квалификации">
-					</figure>
+					</a>
 					<section class="catalog__item_box">
-						<h3 class="box__title">A PLUS</h3>
-						<p class="box__subtitle">Лендинг курсов повышения<br> квалификации</p>
-						<span class="box__btn catalog__btn_box">9900руб.</span>
+						<h3 class="box__title">A Plus</h3>
+						<p class="box__subtitle">Лендинг курсов повышения квалификации
+						</p>
+						<a href="#" class="box__button">9900руб.
+						</a>
 					</section>
-				</a>
-				<a href="#" class="catalog__item">
-					<figure class="catalog__pic">
+				</section>
+				<section class="catalog__item">
+					<a href="#">
 						<img src="http://placehold.it/150x100" alt="Крафтовое пиво">
-					</figure>
+					</a>
 					<section class="catalog__item_box">
-						<h3 class="box__title">KVAST</h3>
-						<p class="box__subtitle">Промо-сайт производителя<br> крафтового пива </p>
-						<span class="box__btn catalog__btn_box">9900руб.</span>
+						<h3 class="box__title">Kvast</h3>
+						<p class="box__subtitle">Промо-сайт производителя крафтового пива 
+						</p>
+						<a href="#" class="box__button">9900руб.
+						</a>
 					</section>
-				</a>
+				</section>
 			</section>
 		</section>
 		<section class="filters">
@@ -106,22 +122,20 @@
 		</section>
 		<section class="map">
 		<h2 class="visually__hidden">Как нас найти</h2>
-			<aside class="map__box">
+			<div class="map__box">
 				<h3>NERDS DESIGN STUDIO</h3>
 				<p>191186, Санкт-Петербург,<br> ул.Большая Конюшеная, д.19.8</p>
 				<p>тел.+7(812)275-75-75</p>
 				<a href="#" class="btn__map btn__write_us">Напишите нам</a>
-			</aside>
+			</div>
 		</section>
 	</main>
 	<footer class="footer">
-		<div class="footer__socials">
-			<ul class="socials__list">
-				<li><a href="#" class="socials__btn social__btn_vk">Vkontakte</a></li>
-				<li><a href="#" class="socials__btn social__btn_fb">Facebook</a></li>
-				<li><a href="#" class="socials__btn socials__btn_insta">Instagram</a></li>
+			<ul class="footer__socials">
+				<li class="socials__item"><a href="#" class="socials__btn socials__btn_vk">Vkontakte</a></li>
+				<li class="socials__item"><a href="#" class="socials__btn social__btn_fb">Facebook</a></li>
+				<li class="socials__item"><a href="#" class="socials__btn socials__btn_inst">Instagram</a></li>
 			</ul>
-		</div>
 		<div class="footer__discount">
 			<p class="footer__offer">Давайте дружить, это выгодно!</p><p>Скидка 10% для друзей из социальных сетей</p>
 		</div>
@@ -129,7 +143,7 @@
 	<section class="feedback">
 		<h2 class="feedback__title">Напишите нам</h2>
 		<span class="feedback__close">x</span>
-		<button class="btn__feedback btn__write_us">Напишите нам</button>
+		<button class="btn__feedback btn__feedback_write">Напишите нам</button>
 		<!--Здесь будет форма-->
 	</section>
 </body>
