@@ -5,31 +5,63 @@
 	<title>Магазин готовых шаблонов</title>
 </head>
 <body>
-	<header class="main__header">
-		<nav class="main__navigation container">
-			<a><img src="image/nerds.jpg" width="160" height="65" alt="Логотип веб-студии Nerds">
-			</a>
-			<ul class="site__navigation">
-				<li><a href="#">Студия</a></li>
-				<li><a href="#">Клиенты</a></li>
-				<li><a href="#">Магазин</a></li>
-				<li><a href="#">Контакты</a></li>
-			</ul>
-			<a href="#" class="cart__login"><img src="image/cart-icon.svg">Корзина</a>
-		</nav>
-	</header>
-	<div class="main__title">
-		<h1>Магазин готовых шаблонов</h1>
-	</div>
+	<section class="wrap__header">
+		<header class="header container">
+			<nav class="navigation">
+				<a href="#" class="navigation__logo"><img src="image/nerds.jpg" width="160" height="65" alt="Логотип веб-студии Nerds">
+				</a>
+				<ul class="navigation__list">
+					<li class="navigation__item"><a href="#">Студия</a></li>
+					<li class="navigation__item"><a href="#">Клиенты</a></li>
+					<li class="navigation__item"><a href="#">Магазин</a></li>
+					<li class="navigation__item"><a href="#">Контакты</a></li>
+				</ul>
+				<a href="#" class="navigation__cart"><img src="image/cart-icon.svg">Корзина</a>
+			</nav>
+		</header>
+		<div class="main__title">
+			<h1>Магазин готовых шаблонов</h1>
+		</div>
+	</section>
 	<main class="content container">
+		<section class="sidebar">
+			<h2 class="visually hidden">Фильтр товаров</h2>
+			<form class="sidebar__filters" action="/echo" method="post">
+				<fieldset>
+					<legend class="filters__title">Стоимость:</legend>
+						<input type="range" name="pricecount" min="0" max="15000" step="100">
+						<p>от
+						<output name="priceoutput">0</output>
+						до
+						<output name="priceoutput">15</output></p>
+				</fieldset>
+				<fieldset>
+					<legend class="filters__title">Сетка:</legend>
+						<ul>
+							<li class="filters__item"><input type="radio" name="net" checked>Адаптивная</li>
+							<li class="filters__item"><input type="radio" name="net">Резиновая</li>
+						</ul>
+				</fieldset>
+				<fieldset>
+					<legend class="filters__title">Особенности:</legend>
+						<ul>
+							<li class="filters__item"><input type="checkbox" name="slider">Слайдер</li>
+							<li class="filters__item"><input type="checkbox" name="features">Блок преимуществ</li>
+							<li class="filters__item"><input type="checkbox" name="news">Новости</li>
+							<li class="filters__item"><input type="checkbox" name="gallery">Галерея</li>
+							<li class="filters__item"><input type="checkbox" name="bascket">Корзина</li>
+						</ul>
+				</fieldset>
+			</form>
+		</section>
 		<section class="catalog">
 			<div class="catalog__sort">
-				<span class="catalog__sort_title">Сортировка</span>
+				<span class="catalog__sort_title">Сортировать:</span>
 				<a href="#" class="catalog__sort_type">По цене</a>
 				<a href="#" class="catalog__sort_type">По типу</a>
 				<a href="#" class="catalog__sort_type">По названию</a>
-				<a href="#" class="arrow__sort_down arrow__sort_active">Вниз</a>
-				<a href="#" class="arrow__sort_up">Вверх</a>
+				<a href="#" class="arrow__sort_down arrow__sort_active"><img src="image/icon-down-dir.svg" alt="Вниз"></a>
+				<a href="#" class="arrow__sort_up"><img src="image/icon-up-dir.svg" alt="Вверх"></a>
 			</div>
 			<h2 class="visually__hidden">Список шаблонов</h2>
 			<section class="catalog__list">
@@ -39,6 +71,7 @@
 					</a>
 					<section class="catalog__item_box">
 						<h3 class="box__title">Sedona</h3>
+						<img src="image/browser.svg">
 						<p class="box__subtitle">Информационный сайт для туристов</p>
 						<p>
 						<a href="#" class="box__button">9900руб.</a>
@@ -51,6 +84,7 @@
 					</a>
 					<section class="catalog__item_box">
 						<h3 class="box__title">Pink App</h3>
+						<img src="image/browser.svg">
 						<p class="box__subtitle">Продуктовый лендинг приложений для iOS и Android</p>
 						
 						<a href="#" class="box__button">9900руб.
@@ -64,6 +98,7 @@
 					</a>
 					<section class="catalog__item_box">
 						<h3 class="box__title">Barbershop</h3>
+						<img src="image/browser.svg">
 						<p class="box__subtitle">Сайт салона красоты. Для мужчин,да.
 						</p>
 						
@@ -78,6 +113,7 @@
 					</a>
 					<section class="catalog__item_box">
 						<h3 class="box__title">Mishka</h3>
+						<img src="image/browser.svg">
 						<p class="box__subtitle">Интернет-магазин< вязаных игрушек
 						</p>
 						<a href="#" class="box__button">9900руб.
@@ -90,6 +126,7 @@
 					</a>
 					<section class="catalog__item_box">
 						<h3 class="box__title">A Plus</h3>
+						<img src="image/browser.svg">
 						<p class="box__subtitle">Лендинг курсов повышения квалификации
 						</p>
 						<a href="#" class="box__button">9900руб.
@@ -102,6 +139,7 @@
 					</a>
 					<section class="catalog__item_box">
 						<h3 class="box__title">Kvast</h3>
+						<img src="image/browser.svg">
 						<p class="box__subtitle">Промо-сайт производителя крафтового пива 
 						</p>
 						<a href="#" class="box__button">9900руб.
@@ -109,10 +147,6 @@
 					</section>
 				</section>
 			</section>
-		</section>
-		<section class="filters">
-			<h2 class="visually hidden">Фильтр товаров</h2>
-			<!--Здесь будет форма-->
 		</section>
 		<section class="catalog__pagination">
 			<span class="catalog__pagination_active">1</span>
@@ -122,11 +156,14 @@
 		</section>
 		<section class="map">
 		<h2 class="visually__hidden">Как нас найти</h2>
+			<div>
+				<img src="image/map.jpg" width="1440" height="416" alt="191186, Санкт-Петербург, ул. Б.Конюшеная, д.19/18 тел.+7(812)275-75-75">
+			</div>
 			<div class="map__box">
 				<h3>NERDS DESIGN STUDIO</h3>
 				<p>191186, Санкт-Петербург,<br> ул.Большая Конюшеная, д.19.8</p>
 				<p>тел.+7(812)275-75-75</p>
-				<a href="#" class="btn__map btn__write_us">Напишите нам</a>
+				<button class="btn__map btn__write_us">Напишите нам</button>
 			</div>
 		</section>
 	</main>
@@ -142,9 +179,16 @@
 	</footer>
 	<section class="feedback">
 		<h2 class="feedback__title">Напишите нам</h2>
-		<span class="feedback__close">x</span>
+			<form>
+				<p><label for="text">Ваше имя:</label></p>
+				<input type="text" name="name" placeholder="Представьтесь, пожалуйста">
+				<p><label for="text">Ваш e-mail:</label></p>
+				<input type="text" name="email" placeholder="Для отправки ответа">
+				<p><label for="text">Текст письма:</label></p>
+				<textarea rows="25" cols="60" name="text" placeholder="В свободной форме"></textarea>
+			</form>
+		<button class="feedback__close">Закрыть</button>
 		<button class="btn__feedback btn__feedback_write">Напишите нам</button>
-		<!--Здесь будет форма-->
 	</section>
 </body>
 </html>
