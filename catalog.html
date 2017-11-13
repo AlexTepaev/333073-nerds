@@ -37,20 +37,33 @@
 				</fieldset>
 				<fieldset>
 					<legend class="filters__title">Сетка:</legend>
-						<ul>
-							<li class="filters__item"><input type="radio" name="net" checked>Адаптивная</li>
-							<li class="filters__item"><input type="radio" name="net">Резиновая</li>
-						</ul>
+						<input type="radio" id="adaptive" checked>
+						<label for="adaptive">Адаптивная</label>
+						<input type="radio" id="rubber">
+						<label for="rubber">Резиновая</label>
 				</fieldset>
 				<fieldset>
 					<legend class="filters__title">Особенности:</legend>
-						<ul>
-							<li class="filters__item"><input type="checkbox" name="slider">Слайдер</li>
-							<li class="filters__item"><input type="checkbox" name="features">Блок преимуществ</li>
-							<li class="filters__item"><input type="checkbox" name="news">Новости</li>
-							<li class="filters__item"><input type="checkbox" name="gallery">Галерея</li>
-							<li class="filters__item"><input type="checkbox" name="bascket">Корзина</li>
-						</ul>
+						<p>
+						<input type="checkbox" id="slider">
+						<label for="slider">Слайдер</label>
+						</p>
+						<p>
+						<input type="checkbox" id="features">
+						<label for="features">Блок преимуществ</label>
+						</p>
+						<p>
+						<input type="checkbox" id="news">
+						<label for="news">Новости</label>
+						</p>
+						<p>
+						<input type="checkbox" id="gallery">
+						<label for="gallery">Галерея</label>
+						</p>
+						<p>
+						<input type="checkbox" id="basket">
+						<label for="basket">Корзина</label>
+						</p>
 				</fieldset>
 			</form>
 		</section>
@@ -70,12 +83,10 @@
 						<img src="image/sedona.jpg" width="360" height="576" alt="Седона">
 					</a>
 					<section class="catalog__item_box">
+						<img src="image/browser.svg" width="360" height="40" alt="Панель просмотра" >
 						<h3 class="box__title">Sedona</h3>
-						<img src="image/browser.svg">
 						<p class="box__subtitle">Информационный сайт для туристов</p>
-						<p>
 						<a href="#" class="box__button">9900руб.</a>
-						</p>
 					</section>
 				</section>
 				<section class="catalog__item">
@@ -83,13 +94,11 @@
 						<img src="image/Pink__1.jpg" width="360" height="576" alt="Лендинг для приложений">
 					</a>
 					<section class="catalog__item_box">
+						<img src="image/browser.svg" width="360" height="40" alt="Панель просмотра" >
 						<h3 class="box__title">Pink App</h3>
-						<img src="image/browser.svg">
 						<p class="box__subtitle">Продуктовый лендинг приложений для iOS и Android</p>
-						
 						<a href="#" class="box__button">9900руб.
 						</a>
-					
 					</section>
 				</section>
 				<section class="catalog__item">
@@ -97,23 +106,21 @@
 						<img src="image/Borodinski.jpg" width="360" height="576" alt="Барбершоп">
 					</a>
 					<section class="catalog__item_box">
+						<img src="image/browser.svg" width="360" height="40" alt="Панель просмотра">
 						<h3 class="box__title">Barbershop</h3>
-						<img src="image/browser.svg">
 						<p class="box__subtitle">Сайт салона красоты. Для мужчин,да.
 						</p>
-						
 						<a href="#" class="box__button">
 						9900руб.
 						</a>
-						
 					</section>
 				<section class="catalog__item">
 					<a href="#">
 						<img src="image/mishka.jpg" width="360" height="576" alt="Интернет-магазин Мишка">
 					</a>
 					<section class="catalog__item_box">
+						<img src="image/browser.svg" width="360" height="40" alt="Панель просмотра">
 						<h3 class="box__title">Mishka</h3>
-						<img src="image/browser.svg">
 						<p class="box__subtitle">Интернет-магазин< вязаных игрушек
 						</p>
 						<a href="#" class="box__button">9900руб.
@@ -125,8 +132,8 @@
 						<img src="image/aplus.jpg" width="360" height="576" alt="Курсы повышения квалификации">
 					</a>
 					<section class="catalog__item_box">
+						<img src="image/browser.svg" width="360" height="40" alt="Панель просмотра">
 						<h3 class="box__title">A Plus</h3>
-						<img src="image/browser.svg">
 						<p class="box__subtitle">Лендинг курсов повышения квалификации
 						</p>
 						<a href="#" class="box__button">9900руб.
@@ -138,8 +145,8 @@
 						<img src="image/kvast.jpg" width="360" height="576" alt="Крафтовое пиво">
 					</a>
 					<section class="catalog__item_box">
+						<img src="image/browser.svg" width="360" height="40" alt="Панель просмотра">
 						<h3 class="box__title">Kvast</h3>
-						<img src="image/browser.svg">
 						<p class="box__subtitle">Промо-сайт производителя крафтового пива 
 						</p>
 						<a href="#" class="box__button">9900руб.
@@ -179,14 +186,14 @@
 	</footer>
 	<section class="feedback">
 		<h2 class="feedback__title">Напишите нам</h2>
-			<form>
-				<p><label for="text">Ваше имя:</label></p>
-				<input type="text" name="name" placeholder="Представьтесь, пожалуйста">
-				<p><label for="text">Ваш e-mail:</label></p>
-				<input type="text" name="email" placeholder="Для отправки ответа">
-				<p><label for="text">Текст письма:</label></p>
-				<textarea rows="25" cols="60" name="text" placeholder="В свободной форме"></textarea>
-			</form>
+		<form>
+			<p><label for="text">Ваше имя:</label>
+			<input type="text" name="name" placeholder="Представьтесь, пожалуйста"></p>
+			<p><label for="text">Ваш e-mail:</label>
+			<input type="text" name="email" placeholder="Для отправки ответа"></p>
+			<p><label for="text">Текст письма:</label>
+			<textarea rows="25" cols="60" name="text" placeholder="В свободной форме"></textarea></p>
+		</form>
 		<button class="feedback__close">Закрыть</button>
 		<button class="btn__feedback btn__feedback_write">Напишите нам</button>
 	</section>
