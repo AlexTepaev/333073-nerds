@@ -3,18 +3,22 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Магазин готовых шаблонов</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body>
 	<section class="wrap__header">
 		<header class="header container">
-			<nav class="navigation">
-				<a href="#" class="navigation__logo"><img src="image/nerds.jpg" width="160" height="65" alt="Логотип веб-студии Nerds">
-				</a>
+			<a href="#" class="header__logo" title="Логотип веб-студии Нердс">
+				<span class="logo__icon logo__icon_nerds"></span>
+			</a>
+			<nav class="navigation">	
 				<ul class="navigation__list">
-					<li class="navigation__item"><a href="#">Студия</a></li>
-					<li class="navigation__item"><a href="#">Клиенты</a></li>
-					<li class="navigation__item"><a href="#">Магазин</a></li>
-					<li class="navigation__item"><a href="#">Контакты</a></li>
+					<li><a href="#">Студия</a></li>
+					<li><a href="#">Клиенты</a></li>
+					<li><a href="#">Магазин</a></li>
+					<li><a href="#">Контакты</a></li>
 				</ul>
 				<a href="#" class="navigation__cart"><img src="image/cart-icon.svg">Корзина</a>
 			</nav>
@@ -66,6 +70,7 @@
 						</p>
 				</fieldset>
 			</form>
+			<a href="#" class="sidebar__btn">Показать</a>
 		</section>
 		<section class="catalog">
 			<div class="catalog__sort">
@@ -79,7 +84,7 @@
 			<h2 class="visually__hidden">Список шаблонов</h2>
 			<section class="catalog__list">
 				<section class="catalog__item">
-					<a href="#">
+					<a href="#" class="catalog__link">
 						<img src="image/sedona.jpg" width="360" height="576" alt="Седона">
 					</a>
 					<section class="catalog__item_box">
@@ -156,10 +161,10 @@
 			</section>
 		</section>
 		<section class="catalog__pagination">
-			<span class="catalog__pagination_active">1</span>
+			<span>1</span>
 			<a href="#">2</a>
 			<a href="#">3</a>
-			<a href="#" class="catalog__pagination_next">СЛЕДУЮЩАЯ</a>
+			<a href="#" class="catalog__pagination_next">Следующая</a>
 		</section>
 		<section class="map">
 		<h2 class="visually__hidden">Как нас найти</h2>
@@ -176,9 +181,8 @@
 	</main>
 	<footer class="footer">
 			<ul class="footer__socials">
-			<li class="socials__item"><a href="#" class="btn__socials socials__btn_vk"><img src="image/vk.png" width="79" height="79"></a></li>
-			<li class="socials__item"><a href="#" class="btn__socials socials__btn_fb"><img src="image/fb.png" width="79" height="79"></a></li>
-			<li class="socials__item"><a href="#" class="btn__socials socials__btn_inst"><img src="image/insta.png" width="" height="79"></a></li>
+			<li class="socials__item"><a href="#" class="socials__link"><div class="btn__socials socials__btn_vk"></div></a></li>
+			
 		</ul>
 		<div class="footer__discount">
 			<p class="footer__offer">Давайте дружить, это выгодно!</p><p>Скидка 10% для друзей из социальных сетей</p>
@@ -186,15 +190,15 @@
 	</footer>
 	<section class="feedback">
 		<h2 class="feedback__title">Напишите нам</h2>
-		<form>
-			<p><label for="text">Ваше имя:</label>
+		<form class="feedback__form" method="post" action="submit.html">
+			<p><label for="text" class="label">Ваше имя:</label><br>
 			<input type="text" name="name" placeholder="Представьтесь, пожалуйста"></p>
-			<p><label for="text">Ваш e-mail:</label>
+			<p><label for="text" class="label">Ваш e-mail:</label>
 			<input type="text" name="email" placeholder="Для отправки ответа"></p>
-			<p><label for="text">Текст письма:</label>
+			<p><label for="text" class="label">Текст письма:</label>
 			<textarea rows="25" cols="60" name="text" placeholder="В свободной форме"></textarea></p>
 		</form>
-		<button class="feedback__close">Закрыть</button>
+		<span class="feedback__close">Закрыть</span>
 		<button class="btn__feedback btn__feedback_write">Напишите нам</button>
 	</section>
 </body>
