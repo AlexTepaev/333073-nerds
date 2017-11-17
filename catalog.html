@@ -10,8 +10,7 @@
 <body>
 	<section class="wrap__header">
 		<header class="header container">
-			<a href="#" class="header__logo" title="Логотип веб-студии Нердс">
-				<span class="logo__icon logo__icon_nerds"></span>
+			<a href="#" class="navigation__logo"><img src="image/nerds.png" width="160" height="65" alt="Логотип веб-студии Nerds">
 			</a>
 			<nav class="navigation">	
 				<ul class="navigation__list">
@@ -41,31 +40,31 @@
 				</fieldset>
 				<fieldset>
 					<legend class="filters__title">Сетка:</legend>
-						<input type="radio" id="adaptive" checked>
+						<input class="visually__hidden filter__input filter__input_radio" type="checkbox" type="radio" id="adaptive" checked disabled>
 						<label for="adaptive">Адаптивная</label>
-						<input type="radio" id="rubber">
+						<input class="visually__hidden filter__input filter__input_radio" type="checkbox" type="radio" id="rubber">
 						<label for="rubber">Резиновая</label>
 				</fieldset>
 				<fieldset>
 					<legend class="filters__title">Особенности:</legend>
 						<p>
-						<input type="checkbox" id="slider">
+						<input class="visually__hidden filter__input filter__input_checkbox" type="checkbox" id="slider">
 						<label for="slider">Слайдер</label>
 						</p>
 						<p>
-						<input type="checkbox" id="features">
+						<input class="visually__hidden filter__input filter__input_checkbox" type="checkbox" type="checkbox" id="features">
 						<label for="features">Блок преимуществ</label>
 						</p>
 						<p>
-						<input type="checkbox" id="news">
+						<input class="visually__hidden filter__input filter__input_checkbox" type="checkbox" type="checkbox" id="news">
 						<label for="news">Новости</label>
 						</p>
 						<p>
-						<input type="checkbox" id="gallery">
+						<input class="visually__hidden filter__input filter__input_checkbox" type="checkbox" type="checkbox" id="gallery">
 						<label for="gallery">Галерея</label>
 						</p>
 						<p>
-						<input type="checkbox" id="basket">
+						<input class="visually__hidden filter__input filter__input_checkbox" type="checkbox" type="checkbox" id="basket">
 						<label for="basket">Корзина</label>
 						</p>
 				</fieldset>
@@ -108,7 +107,7 @@
 				</section>
 				<section class="catalog__item">
 					<a href="#">
-						<img src="image/Borodinski.jpg" width="360" height="576" alt="Барбершоп">
+						<img src="image/Borodinsky.jpg" width="360" height="576" alt="Барбершоп">
 					</a>
 					<section class="catalog__item_box">
 						<img src="image/browser.svg" width="360" height="40" alt="Панель просмотра">
@@ -172,7 +171,7 @@
 				<img src="image/map.jpg" width="1440" height="416" alt="191186, Санкт-Петербург, ул. Б.Конюшеная, д.19/18 тел.+7(812)275-75-75">
 			</div>
 			<div class="map__box">
-				<h3>NERDS DESIGN STUDIO</h3>
+				<h3>Nerds Design Studio</h3>
 				<p>191186, Санкт-Петербург,<br> ул.Большая Конюшеная, д.19.8</p>
 				<p>тел.+7(812)275-75-75</p>
 				<button class="btn__map btn__write_us">Напишите нам</button>
@@ -180,9 +179,19 @@
 		</section>
 	</main>
 	<footer class="footer">
-			<ul class="footer__socials">
-			<li class="socials__item"><a href="#" class="socials__link"><div class="btn__socials socials__btn_vk"></div></a></li>
-			
+		<ul class="footer__socials">
+			<li class="socials__item">
+				<a href="#"><img src="image/vk.png" width="79" height="79"></a>
+			</li>
+			<li class="socials__item">
+				<a href="#">
+				<img src="image/fb.png" width="79" height="79">
+				</a>
+			</li>
+			<li class="socials__item">
+				<a href="#" ><img src="image/insta.png" width="" height="79">
+				</a>
+			</li>
 		</ul>
 		<div class="footer__discount">
 			<p class="footer__offer">Давайте дружить, это выгодно!</p><p>Скидка 10% для друзей из социальных сетей</p>
@@ -190,16 +199,22 @@
 	</footer>
 	<section class="feedback">
 		<h2 class="feedback__title">Напишите нам</h2>
-		<form class="feedback__form" method="post" action="submit.html">
-			<p><label for="text" class="label">Ваше имя:</label><br>
-			<input type="text" name="name" placeholder="Представьтесь, пожалуйста"></p>
-			<p><label for="text" class="label">Ваш e-mail:</label>
-			<input type="text" name="email" placeholder="Для отправки ответа"></p>
-			<p><label for="text" class="label">Текст письма:</label>
-			<textarea rows="25" cols="60" name="text" placeholder="В свободной форме"></textarea></p>
+		<form class="feedback__form" method="post" action="/echo">
+			<p>
+				<label for="name">Ваше имя:</label>
+				<input type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста">
+			</p>
+			<p>
+				<label for="email">Ваш e-mail:</label>
+				<input type="text" id="email" name="email" placeholder="Для отправки ответа">
+			</p>
+			<p>
+				<label for="text">Текст письма:</label>
+				<textarea rows="25" cols="60" id="text" name="text" placeholder="В свободной форме"></textarea>
+			</p>
 		</form>
-		<span class="feedback__close">Закрыть</span>
-		<button class="btn__feedback btn__feedback_write">Напишите нам</button>
+		<button class="btn__feedback btn__feedback_submit">Отправить</button>
+		<a href="#" class="feedback__close">Закрыть</a>
 	</section>
 </body>
 </html>

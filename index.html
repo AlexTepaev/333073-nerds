@@ -10,15 +10,14 @@
 <body>
 	<section class="wrap__header">
 		<header class="header container">
-			<a href="#" class="header__logo" title="Логотип веб-студии Нердс">
-				<span class="logo__icon logo__icon_nerds"></span>
+			<a href="#" class="navigation__logo"><img src="image/nerds.png" width="160" height="65" alt="Логотип веб-студии Nerds">
 			</a>
 			<nav class="navigation">
 				<ul class="navigation__list">
-					<li class="navigation__item"><a href="#" class="link__underline">Студия</a></li>
-					<li class="navigation__item"><a href="#">Клиенты</a></li>
-					<li class="navigation__item"><a href="catalog.html">Магазин</a></li>
-					<li class="navigation__item"><a href="#">Контакты</a></li>
+					<li><a href="index.html">Студия</a></li>
+					<li><a href="#">Клиенты</a></li>
+					<li><a href="catalog.html">Магазин</a></li>
+					<li><a href="#">Контакты</a></li>
 				</ul>
 				 <a href="#" class="navigation__cart"><img src="image/cart-icon.svg">Корзина</a>
 			</nav>
@@ -107,18 +106,18 @@
 		<section class="partners__list">
 			<h2 class="visually__hidden">Наши партнеры</h2>
 			<figure class=partners__item>
-				<a href="https://htmlacademy.ru/" class="partners__link"><span class="partners__icon partners__icon_html"></span></a>
+				<a href="#" class="partners__link partners__link_ac"><img src="image/htmlacademy.png" width="199" height="68" alt="HTMLacademy"></a>
 			</figure>
 			<figure class=partners__item>
-				<a href="#" class="partners__link"><span class="partners__icon partners__icon_barbershop"></span></a>
+				<a href="#"><img src="image/Borodinsky.png" width="209" height="90" alt="Барбершоп Бородинский"></a>
 			</figure>
 			<figure class=partners__item>
-				<a href="#" class="partners__link"><span class="partners__icon partners__icon_pink"></span></a>
+				<a href="#"><img src="image/Pink.png" width="185" height="52" alt="Салон Pink"></a>
 			</figure>
 			<figure class=partners__item>
-				<a href="#" class="partners__link"><span class="partners__icon partners__icon_mishka"></span></a>
+				<a href="#"><img src="image/Mishka.png" width="173" height="84" alt="Mishka"></a>
 			</figure>
-		</section>
+			</section>
 		<section class="map">
 			<h2 class="visually__hidden">Как нас найти</h2>
 			<div class="map__picture">
@@ -135,18 +134,15 @@
 	<footer class="footer">
 		<ul class="footer__socials">
 			<li class="socials__item">
-				<a href="#" class="socials__link">
-					<span class="socials__icon socials__icon_vk"></span>
+				<a href="#"><img src="image/vk.png" width="79" height="79"></a>
+			</li>
+			<li class="socials__item">
+				<a href="#">
+				<img src="image/fb.png" width="79" height="79">
 				</a>
 			</li>
 			<li class="socials__item">
-				<a href="#" class="socials__link">
-					<span class="socials__icon socials__icon_fb"></span>
-				</a>
-			</li>
-			<li class="socials__item">
-				<a href="#" class="socials__link">
-					<span class="socials__icon socials__icon_insta"></span>
+				<a href="#" ><img src="image/insta.png" width="" height="79">
 				</a>
 			</li>
 		</ul>
@@ -156,16 +152,22 @@
 	</footer>
 	<section class="feedback">
 		<h2 class="feedback__title">Напишите нам</h2>
-		<form class="feedback__form" method="post" action="submit.html">
-			<p><label for="text" class="label">Ваше имя:</label><br>
-			<input type="text" name="name" placeholder="Представьтесь, пожалуйста"></p>
-			<p><label for="text" class="label">Ваш e-mail:</label>
-			<input type="text" name="email" placeholder="Для отправки ответа"></p>
-			<p><label for="text" class="label">Текст письма:</label>
-			<textarea rows="25" cols="60" name="text" placeholder="В свободной форме"></textarea></p>
+		<form class="feedback__form" method="post" action="/echo">
+			<p>
+				<label for="name">Ваше имя:</label>
+				<input type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста">
+			</p>
+			<p>
+				<label for="email">Ваш e-mail:</label>
+				<input type="text" id="email" name="email" placeholder="Для отправки ответа">
+			</p>
+			<p>
+				<label for="text">Текст письма:</label>
+				<textarea rows="25" cols="60" id="text" name="text" placeholder="В свободной форме"></textarea>
+			</p>
 		</form>
-		<span class="feedback__close">Закрыть</span>
-		<button class="btn__feedback btn__feedback_write">Напишите нам</button>
+		<button class="btn__feedback btn__feedback_submit">Отправить</button>
+		<a href="#" class="feedback__close">Закрыть</a>
 	</section>
 </body>
 </html>
