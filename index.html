@@ -15,7 +15,7 @@
 					<a href="#" class="navigation__logo"><img src="image/nerds.png" width="160" height="65" alt="Логотип веб-студии Nerds">
 					</a>
 					<ul class="navigation__list">
-						<li><a href="index.html">Студия</a></li>
+						<li class="navigation__current"><a href="index.html">Студия</a></li>
 						<li><a href="#">Клиенты</a></li>
 						<li><a href="catalog.html">Магазин</a></li>
 						<li><a href="#">Контакты</a></li>
@@ -23,31 +23,41 @@
 				 	<a href="#" class="navigation__cart">Корзина</a>
 				</nav>
 			</header>
+			<!-- Окно слайдеров -->
 			<section class="slides container">
+				
+					<input class="visually__hidden" checked type="radio" name="radio" id="switch1">
+					<input class="visually__hidden" checked type="radio" name="radio" id="switch2">
+					<input class="visually__hidden" checked type="radio" name="radio" id="switch3">
+				
 				<div class="slides__switch">
-					<span class="switch__active"></span>
-        			<span></span>
-        			<span></span>
+					<label class="slides__switch_item slides__switch_item1" for="switch1"></label>
+        			<label class="slides__switch_item slides__switch_item2" for="switch2"></label>
+        			<label class="slides__switch_item slides__switch_item3" for="switch3"></label>
       			</div>
-      			<ul class="slides__list">
-	        		<li class="slides__item">
+      			<ul class="slides__list"> 
+      				<li class="slides__item">
+	        		
 	        			<h3>Долго, дорого,<br> скрупулезно.</h3>
 	            		<p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.
 	            		</p>
 	            		<a href="#">Узнать больше</a>
 	        		</li>
 	        		<li class="slides__item">
+	        		
 	        			<h3>Любим математику как никто другой</h3>
 	            		<p>Никакого креатива, только математические формулы для расчета идеальных пропорций.
 	            		</p>
 	            		<a href="#">Узнать больше</a>
 	        		</li>
 	        		<li class="slides__item">
+
 	        			<h3>Только ночь,<br> только хардкор</h3>
-	            		<p>Работать днем, как все? Мы против этого.<br> Ближе к полуночи работа только начинается.
+	            		<p>Работать днем, как все? Мы против этого.<br> Ближе к полуночи работа только начинается. 
 	            		</p>
 	            		<a href="#">Узнать больше</a>
 	        		</li>
+	        
       			</ul>
 			</section>
 	  	</div>
@@ -65,7 +75,7 @@
 			<section class="services__item">
 				<img src="image/apps.png" width="300" height="146" alt="Веб-приложения">
 				<h3>Приложения</h3>
-				<p>Покорите топ-10 приложений в AppStore и Google Play
+				<p>Покорите топ-10 приложений в AppStore и Google Play 
 				</p> 
 				<a href="#" class="btn__services btn__services_apps">Заказать
 				</a>
@@ -82,7 +92,7 @@
 		<article class="about">
 			<section class="about__team">
 				<h2 class="visually__hidden">О нас</h2>
-				<h3>Мы маленькая, но гордая дизайн-студия из Краснодара.
+				<h3>Мы - маленькая, но гордая дизайн-студия из Краснодара.
 				</h3>
 				<p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p><p>Выполняем заказы на разработку:</p>
 				<ul class="about__order">
@@ -96,7 +106,7 @@
 			</section>
 			<section class="about__facts">
 				<img src="image/nerds2.png" width="360" height="208" alt="Логотип Nerds">
-				<p>C 2004 Любим точность во всем:</p>
+				<p>C 2004 года Любим точность во всем:</p>
 					<ul> 
 						<li>146%</li>
 						<li>100%</li>
@@ -106,33 +116,36 @@
 						<li>Минимальная<br> предоплата</li> 
 					</ul>
 			</section>
+
 		</article>
 		<section class="partners__list">
 			<h2 class="visually__hidden">Наши партнеры</h2>
-			<figure class=partners__item>
-				<a href="#"><img src="image/htmlacademy-hover.png" width="199" height="68" alt="HTMLacademy">
+			<div class=partners__item tabindex="0">
+				<a href="https://up.htmlacademy.ru/htmlcss/19" class="partners__link"><img src="image/htmlacademy-hover.png" width="199" height="68" alt="HTMLacademy">
 				</a>
-			</figure>
-			<figure class=partners__item>
-				<a href="#"><img src="image/Borodinsky-hover.png" width="209" height="90" alt="Барбершоп Бородинский"></a>
-			</figure>
-			<figure class=partners__item>
-				<a href="#"><img src="image/Pink-hover.png" width="185" height="52" alt="Салон Pink"></a>
-			</figure>
-			<figure class=partners__item>
-				<a href="#"><img src="image/Mishka-hover.png" width="173" height="84" alt="Mishka"></a>
-			</figure>
+			</div>
+			<div class=partners__item>
+				<a href="#" class="partners__link"><img src="image/Borodinsky-hover.png" width="209" height="90" alt="Барбершоп Бородинский"></a>
+			</div>
+			<div class=partners__item>
+				<a href="#" class="partners__link"><img src="image/Pink-hover.png" width="185" height="52" alt="Салон Pink"></a>
+			</div>
+			<div class=partners__item>
+				<a href="#" class="partners__link"><img src="image/Mishka-hover.png" width="173" height="84" alt="Mishka"></a>
+			 </div>
 		</section>
 	</main>
 	<section class="map">
 		<h2 class="visually__hidden">Как нас найти</h2>
-		<img src="image/map.jpg" alt="191186, Санкт-Петербург, ул. Б.Конюшеная, д.19/18 тел.+7(812)275-75-75">
-		<div class="map__box">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15988.035052576044!2d30.30625045365359!3d59.94036584010551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML+Academy!5e0!3m2!1sru!2sru!4v1512130333329" style="border:0"></iframe>
+	<div class="map__box">
+	   <div class="box__contacts">
 			<h3>Nerds Design Studio</h3>
 			<p>191186, Санкт-Петербург,<br> ул.Большая Конюшеная, д.19.8</p>
 			<p>тел.+7(812)275-75-75</p>
-			<button class="btn__map btn__write_us">Напишите нам</button>
-		</div>
+			<a class="btn__map" href="feedback.html">Напишите нам</a>
+	  </div>
+	</div>
 	</section>
 	<footer class="footer container">
 		<ul class="footer__socials">
@@ -155,25 +168,68 @@
 			</p>
 		</div>
 	</footer>
-	<section class="feedback visually__hidden">
-		<h2 class="feedback__title">Напишите нам</h2>
-		<form class="feedback__form" method="post" action="/echo">
-			<p>
-				<label for="name">Ваше имя:</label>
-				<input type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста">
-			</p>
-			<p>
-				<label for="email">Ваш e-mail:</label>
-				<input type="text" id="email" name="email" placeholder="Для отправки ответа">
-			</p>
-			<p>
-				<label for="text">Текст письма:</label>
-				<textarea rows="25" cols="60" id="text" name="text" placeholder="В свободной форме"></textarea>
-			</p>
-		</form>
-		<button class="btn__feedback btn__feedback_submit">Отправить</button>
-		<a href="#" class="feedback__close">Закрыть</a>
-	</section>
+				<!--Модальное окно  -->
+	
+		<section class="modal">
+			<h2>Напишите нам</h2>
+			
+			<form class="feedback__form" method="post" action="/echo">
+				<div class="form__info">
+					<p class="feedback__item">
+						<label for="name">Ваше имя:</label>
+						<input type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста">
+					</p>
+					<p class="feedback__item">
+						<label for="email">Ваш e-mail:</label>
+						<input type="text" id="email" name="email" placeholder="Для отправки ответа">
+					</p>
+				</div>
+				<div class="form__area">
+					<p class="feedback__item">
+						<label for="text">Текст письма:</label>
+						<textarea rows="5" id="text" name="text" placeholder="В свободной форме"></textarea>
+					</p>
+
+					<button class="btn__feedback btn__feedback_submit" type="submit">Отправить</button>
+
+				</div>
+			</form>
+			<button class="modal__close" type="button">Закрыть</button>
+		</section>
+		<script>
+			var link = document.querySelector(".btn__map");
+
+			var popup = document.querySelector(".modal");
+			var close = popup.querySelector(".modal__close");
+
+			var form = popup.querySelector("form");
+			var login = popup.querySelector("[name=name]");
+
+			link.addEventListener("click", function (evt) {
+			evt.preventDefault();
+			popup.classList.add("modal__show");
+			login.focus();
+		    });
+
+	        close.addEventListener("click", function (evt) {
+	        evt.preventDefault();
+	        popup.classList.remove("modal__show")
+	        })
+
+	        form.addEventListener("submit", function (evt) { if (!login.value) {
+      				evt.preventDefault();
+      				console.log("Нужно ввести логин и пароль");
+    						}
+    		});
+
+    		window.addEventListener("keydown", function (evt) {
+    				if (evt.keyCode === 27) {
+      				if (popup.classList.contains("modal__show")) {
+       			 popup.classList.remove("modal__show");
+      			}
+    		}
+  			});
+		</script>
 </body>
 </html>
 

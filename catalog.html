@@ -15,7 +15,7 @@
 					<a href="index.html" class="navigation__logo"><img src="image/nerds.png" width="160" height="65" alt="Логотип веб-студии Nerds">
 					</a>
 					<ul class="navigation__list">
-						<li><a href="#">Студия</a></li>
+						<li><a href="index.html">Студия</a></li>
 						<li><a href="#">Клиенты</a></li>
 						<li><a href="#" class="link__underline">Магазин</a>
 						</li>
@@ -25,7 +25,7 @@
 				</nav>
 			</header>
 			<div class="main__title">
-				<h1>Магазин готовых шаблонов</h1>
+				<h1>Магазин готовых шаблонов </h1>
 			</div>
 		</div>
 	</section>
@@ -56,17 +56,18 @@
 			<form class="sidebar__filters" action="/echo" method="post">	
 				<fieldset class="filters__item">
 					<legend class="filters__title">Сетка:</legend>
-					<p class="filter__option">
+				     <p class="filter__option">
 						<input class="visually__hidden filter__input filter__input_radio" type="checkbox" type="radio" id="adaptive" checked disabled>
 						<label for="adaptive">Адаптивная</label>
 					</p>
 					<p class="filter__option">
-						<input class="visually__hidden filter__input filter__input_radio" type="checkbox" type="radio" id="rubber">
-						<label for="rubber">Фиксированная</label>
+						<input class="visually__hidden filter__input filter__input_radio" type="checkbox" type="radio" id="fixed">
+						<label for="fixed">Фиксированная</label>
 					</p>
 					<p class="filter__option">
 						<input class="visually__hidden filter__input filter__input_radio" type="checkbox" type="radio" id="rubber">
-						<label for="rubber">Резиновая</label>
+						<label for="rubber">
+						Резиновая</label>
 					</p>
 				</fieldset>
 				<fieldset class="filters__item">
@@ -178,14 +179,16 @@
 	</main>
 		<section class="map">
 		<h2 class="visually__hidden">Как нас найти</h2>
-			<img src="image/map.jpg" width="1540" height="416" alt="191186, Санкт-Петербург, ул. Б.Конюшеная, д.19/18 тел.+7(812)275-75-75">
-			<div class="map__box">
-				<h3>Nerds Design Studio</h3>
-				<p>191186, Санкт-Петербург,<br> ул.Большая Конюшеная, д.19.8</p>
-				<p>тел.+7(812)275-75-75</p>
-				<button class="btn__map">Напишите нам</button>
-			</div>
-		</section>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15988.035052576044!2d30.30625045365359!3d59.94036584010551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML+Academy!5e0!3m2!1sru!2sru!4v1512130333329" style="border:0"></iframe>
+	<div class="map__box">
+	   <div class="box__contacts">
+			<h3>Nerds Design Studio</h3>
+			<p>191186, Санкт-Петербург,<br> ул.Большая Конюшеная, д.19.8</p>
+			<p>тел.+7(812)275-75-75</p>
+			<a class="btn__map" href="feedback.html">Напишите нам</a>
+	  </div>
+	</div>
+	</section>
 	<footer class="footer container">
 		<ul class="footer__socials">
 			<li class="socials__item">
@@ -208,23 +211,65 @@
 		</div>
 	</footer>
 				<!-- Модальное окно -->
-	<section class="feedback visually__hidden">
-		<h2 class="feedback__title">Напишите нам</h2>
-		<form class="feedback__form" method="post" action="/echo">
-			<p>
-				<label for="name">Ваше имя:</label>
-				<input type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста">
-			</p>
-			<p>
-				<label for="email">Ваш e-mail:</label>
-				<input type="text" id="email" name="email" placeholder="Для отправки ответа">
-			</p>
-				<label for="text">Текст письма:</label>
-				<textarea rows="25" cols="60" id="text" name="text" placeholder="В свободной форме"></textarea>
-			</p>
-		</form>
-		<button class="btn__feedback btn__feedback_submit">Отправить</button>
-		<a href="#" class="feedback__close">Закрыть</a>
-	</section> 
+	<section class="modal">
+			<h2>Напишите нам</h2>
+			
+			<form class="feedback__form" method="post" action="/echo">
+				<div class="form__info">
+					<p class="feedback__item">
+						<label for="name">Ваше имя:</label>
+						<input type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста">
+					</p>
+					<p class="feedback__item">
+						<label for="email">Ваш e-mail:</label>
+						<input type="text" id="email" name="email" placeholder="Для отправки ответа">
+					</p>
+				</div>
+				<div class="form__area">
+					<p class="feedback__item">
+						<label for="text">Текст письма:</label>
+						<textarea rows="5" id="text" name="text" placeholder="В свободной форме"></textarea>
+					</p>
+
+					<button class="btn__feedback btn__feedback_submit">Отправить</button>
+
+				</div>
+			</form>
+			<button class="modal__close" type="button">Закрыть</button>
+		</section>
+		<script>
+			var link = document.querySelector(".btn__map");
+
+			var popup = document.querySelector(".modal");
+			var close = popup.querySelector(".modal__close");
+
+			var form = popup.querySelector("form");
+			var login = popup.querySelector("[name=name]");
+
+			link.addEventListener("click", function (evt) {
+			evt.preventDefault();
+			popup.classList.add("modal__show");
+			login.focus();
+		    });
+
+	        close.addEventListener("click", function (evt) {
+	        evt.preventDefault();
+	        popup.classList.remove("modal__show")
+	        })
+
+	        form.addEventListener("submit", function (evt) { if (!login.value) {
+      				evt.preventDefault();
+      				console.log("Нужно ввести логин и пароль");
+    						}
+    		});
+
+    		window.addEventListener("keydown", function (evt) {
+    				if (evt.keyCode === 27) {
+      				if (popup.classList.contains("modal__show")) {
+       			 popup.classList.remove("modal__show");
+      			}
+    		}
+  			});
+		</script>
 </body>
 </html>
