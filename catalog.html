@@ -17,7 +17,7 @@
 					<ul class="navigation__list">
 						<li><a href="index.html">Студия</a></li>
 						<li><a href="#">Клиенты</a></li>
-						<li><a href="#" class="link__underline">Магазин</a>
+						<li class="navigation__current"><a href="#">Магазин</a>
 						</li>
 						<li><a href="#">Контакты</a></li>
 					</ul>
@@ -142,7 +142,7 @@
 					<img src="image/mishka.jpg" width="360" height="576" alt="Интернет-магазин Мишка">
 					<section class="catalog__item_box">
 						<h3 class="box__title">Mishka</h3>
-						<p class="box__subtitle">Интернет-магазин< вязаных игрушек
+						<p class="box__subtitle">Интернет-магазин вязаных игрушек 
 						</p>
 						<a href="#" class="box__button">9900руб.
 						</a>
@@ -237,39 +237,6 @@
 			</form>
 			<button class="modal__close" type="button">Закрыть</button>
 		</section>
-		<script>
-			var link = document.querySelector(".btn__map");
-
-			var popup = document.querySelector(".modal");
-			var close = popup.querySelector(".modal__close");
-
-			var form = popup.querySelector("form");
-			var login = popup.querySelector("[name=name]");
-
-			link.addEventListener("click", function (evt) {
-			evt.preventDefault();
-			popup.classList.add("modal__show");
-			login.focus();
-		    });
-
-	        close.addEventListener("click", function (evt) {
-	        evt.preventDefault();
-	        popup.classList.remove("modal__show")
-	        })
-
-	        form.addEventListener("submit", function (evt) { if (!login.value) {
-      				evt.preventDefault();
-      				console.log("Нужно ввести логин и пароль");
-    						}
-    		});
-
-    		window.addEventListener("keydown", function (evt) {
-    				if (evt.keyCode === 27) {
-      				if (popup.classList.contains("modal__show")) {
-       			 popup.classList.remove("modal__show");
-      			}
-    		}
-  			});
-		</script>
+		<script src="js/scripts.js"></script>
 </body>
 </html>

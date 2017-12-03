@@ -1,9 +1,10 @@
 html,
 body {
-	margin: 0 auto;
-	padding: 0;
 	min-width: 1440px;
 	min-height: 2476px;
+	margin: 0 auto;
+	padding: 0;
+	
 	 
 	font-family: 'Roboto', Arial, sans-serif;
 	font-size: 16px;
@@ -15,11 +16,18 @@ body {
 	background-color: #ffffff;
 }
 
-/*Базовые стили*/
+a {
+	text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 .container {
-	
 	width: 1200px;
+
 	padding: 0;
 	margin: 0 auto;
 }
@@ -47,14 +55,7 @@ body {
 	display: none;
 }
 
-a {
-	text-decoration: none;
-}
 
-img {
-  max-width: 100%;
-  height: auto;
-}
 
 .navigation {
 	display: flex;
@@ -85,22 +86,64 @@ img {
 
 
 .navigation__list {
+	margin: 0;
 	padding: 0;
 	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	width: 600px;
+	justify-content: flex-start;
+	align-items: center;
+	
+	width: 440px;
 	list-style: none;
+	height: 40px;
+	margin-top: 36px;
+	margin-right: 50px;
 }
 
-
+.navigation__list li {
+	margin-right: 46px;
+}
 
 .navigation__list a {
-	display: block;
-	padding: 25px 30px 5px 30px;
-	vertical-align: middle;
 	color:  #283136;
 }
+
+.navigation__current,
+.inner__page .navigation__current {
+	position: relative;
+}
+
+.navigation__current a[href],
+.inner__page .navigation__current a[href] {
+	pointer-events: none;
+}
+
+.navigation__current::after {
+  content: "";
+  width: 60px; 
+
+  position: absolute;
+ 
+  bottom: -2px;
+  left: 1px;
+
+  height: 3px;
+
+  background-color: #fb565a;
+}
+
+.inner__page .navigation__current::after {
+  content: "";
+  width: 74px; 
+
+  position: absolute;
+  top: 31px;
+  left: 2px;
+
+  height: 3px;
+
+  background-color: #fb565a;
+}
+
 
 .navigation__cart {
 	color: #283136;
@@ -890,7 +933,11 @@ img {
 	padding: 0;
 
 	border: none;
-}
+} 
+
+.sidebar__filters:last-of-type .filters__item:last-of-type {
+	margin-top: 30px;
+} 
 
 .filters__title {
 	margin-left: 10px;
@@ -1016,7 +1063,7 @@ img {
   	position: absolute;
 
   	left: -35px;
-  	top: -2px;
+  	top: -1px;
   }
 
   .filter__input_checkbox + label:hover::before {
@@ -1024,7 +1071,7 @@ img {
   	position: absolute;
 
   	left: -35px;
-  	top: -2px;
+  	top: -1px;
   }
 
 .filter__input_checkbox:checked + label::before {
@@ -1032,7 +1079,7 @@ img {
   	position: absolute;
 
   	left: -35px;
-  	top: -2px;
+  	top: -1px;
   }
 
 .filter__input_checkbox:checked + label:hover::before {
@@ -1040,7 +1087,7 @@ img {
   	position: absolute;
 
   	left: -35px;
-  	top: -2px;
+  	top: -1px;
   }
 
 .filter__input:disabled + label {
@@ -1086,9 +1133,11 @@ img {
 }
 
 .filter__option {
+	margin: 0;
 	margin-left: 19px;
-	margin-bottom: 17px;
-	padding-left: 33px;
+	
+	padding-left: 27px;
+	padding-bottom: 16px;
 }
 
 .filter__option label {
@@ -1129,7 +1178,11 @@ img {
 }
 
 .catalog__item_box p {
+	line-height: 1.2em;
 	text-transform: none;
+	width: 240px;
+	text-align: center;
+	margin-bottom: 28px;
 }
 
 .sidebar {
@@ -1149,12 +1202,15 @@ img {
 
 .sidebar__btn {
 	display: block;
+
+	width: 260px;
 	color: #000000;
 	background-color: #eeeeee;
 	text-align: center;
-	padding: 15px 85px;
+	padding: 15px 0px;
 	border-radius: 4px;
-	margin-top: 45px;
+	margin-top: 30px;
+	margin-left: 10px;
 }
 
 .sidebar__btn:hover,
@@ -1226,16 +1282,18 @@ img {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	width: 762px;
-	/**/
+	
 	min-height: 1950px;
 }
 
 .catalog__item {
 	position: relative;
 	width: 362px;
-	margin-bottom: 30px;
+	height: 575px;
 
-    height: 575px;
+    margin-right: -4px;
+    margin-left: 4px;
+    margin-bottom: 30px;
 }
 
 .catalog__item::before {
@@ -1257,7 +1315,7 @@ img {
 
 .catalog__item:hover::before {
 	opacity: 1;
-	box-shadow: 0 0 12px 5px #e5e5e5;
+	box-shadow: 0 -3px 7px 1px #e5e5e5;
 }
 
 .catalog__item_box {
@@ -1265,12 +1323,17 @@ img {
 	flex-direction: column;
 	align-items: center; 
 	position: absolute;
-	bottom: 0px;
+	bottom: -1px;
 	background-color: #eeeeee;
 
 	width: 362px;
-	height: 235px;
+	min-height: 237px;
 	opacity: 0;
+}
+
+.catalog__item_box .box__title {
+	margin-top: 36px;
+	margin-bottom: 0px;
 }
 
 .catalog__item:hover .catalog__item_box {
@@ -1282,7 +1345,7 @@ img {
 .box__button {
 	color: #ffffff;
 	background-color: #fb565a;
-	padding: 17px 60px;
+	padding: 14px 62px;
 	border-radius: 4px;
 }
 
@@ -1324,7 +1387,7 @@ img {
 	color: #000000;
 	background-color: #eeeeee;
 	border-radius: 2px;
-	padding:  17px 78px
+	padding:  17px 70px
 }
 
 .catalog__pagination a:hover,
