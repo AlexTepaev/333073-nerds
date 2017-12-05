@@ -975,7 +975,7 @@ img {
 .scale__bar {
 	width: 70%;
   	height: 2px;
-
+	margin-left: 0%;
   	background: #00ca74;
 }
 
