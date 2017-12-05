@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Магазин готовых шаблонов</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/main.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body class="inner__page">
@@ -37,7 +37,7 @@
 					<div class="range__filter">
 						<div class="range__controls">
 							<div class="controls__scale">
-              					<div class="scale__bar" style="margin-left: 20%; width: 30%">
+              					<div class="scale__bar" style="margin-left: 0%; width: 70%">
               					</div>
             				</div>
             				<div class="controls__toggle controls__toggle_min"></div>
@@ -73,28 +73,28 @@
 				<fieldset class="filters__item">
 					<legend class="filters__title">Особенности:</legend>
 					<p class="filter__option">
-						<input class="visually__hidden filter__input filter__input_checkbox" type="checkbox" id="slider">
+						<input class="visually__hidden filter__input filter__input_checkbox" type="checkbox" id="slider" checked>
 						<label for="slider">Слайдер</label>
 					</p>
 					<p class="filter__option">
-						<input class="visually__hidden filter__input filter__input_checkbox" type="checkbox" type="checkbox" id="features">
+						<input class="visually__hidden filter__input filter__input_checkbox" type="checkbox" id="features">
 						<label for="features">Блок преимуществ</label>
 					</p>
 					<p class="filter__option">
-						<input class="visually__hidden filter__input filter__input_checkbox" type="checkbox" type="checkbox" id="news">
+						<input class="visually__hidden filter__input filter__input_checkbox" type="checkbox" id="news" checked>
 						<label for="news">Новости</label>
 					</p>
 					<p class="filter__option">
-						<input class="visually__hidden filter__input filter__input_checkbox" type="checkbox" type="checkbox" id="gallery">
+						<input class="visually__hidden filter__input filter__input_checkbox" type="checkbox" id="gallery">
 						<label for="gallery">Галерея</label>
 					</p>
 					<p class="filter__option">
-						<input class="visually__hidden filter__input filter__input_checkbox" type="checkbox" type="checkbox" id="basket">
+						<input class="visually__hidden filter__input filter__input_checkbox" type="checkbox" id="basket">
 						<label for="basket">Корзина</label>
 					</p>
 				</fieldset>
 			</form>
-			<a href="#" class="sidebar__btn">Показать</a>
+			<button class="sidebar__btn" type="submit">Показать</a>
 		</section>
 		<section class="catalog">
 			<div class="catalog__sort">
@@ -237,6 +237,6 @@
 			</form>
 			<button class="modal__close" type="button">Закрыть</button>
 		</section>
-		<script src="js/scripts.js"></script>
+		<script src="js/scripts.min.js"></script>
 </body>
 </html>

@@ -1201,7 +1201,8 @@ img {
 
 
 .sidebar__btn {
-	display: block;
+	font: inherit;
+	text-transform: uppercase;
 
 	width: 260px;
 	color: #000000;
@@ -1211,6 +1212,9 @@ img {
 	border-radius: 4px;
 	margin-top: 30px;
 	margin-left: 10px;
+
+	border: none;
+	cursor: pointer;
 }
 
 .sidebar__btn:hover,
