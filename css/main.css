@@ -1243,6 +1243,9 @@ img {
 }
 
 .catalog__item_box .box__title {
+	color: #000000;
+	font-size: 18px;
+	font-weight: bold;
 	margin-top: 36px;
 	margin-bottom: 0px;
 	padding-right: 6px;
